@@ -11,14 +11,9 @@
     --peach: #EDB777;
     --cream: #E5D9D1;
     --rust: #A24F2F;
-    --white: #FFFDF9;
     --dark: #3F3530;
+    --white: #FFFDF9;
 }
-
-
-/* =========================
-   RESET
-========================= */
 
 * {
     margin: 0;
@@ -34,181 +29,151 @@ body {
     background: var(--cream);
     color: var(--dark);
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.7;
-}
-
-img {
-    max-width: 100%;
-    display: block;
+    line-height: 1.6;
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
-
-/* =========================
-   TYPOGRAPHY
-========================= */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 h1,
 h2,
 h3,
 .logo,
-.nav-button,
 .button,
 .eyebrow,
-.booking-button,
-.feature-card a {
+.nav-links a {
     font-family: "Donau", Arial, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    font-weight: 400;
 }
 
 h1,
 h2,
 h3 {
-    line-height: 1;
-    font-weight: 400;
+    line-height: 1.05;
 }
 
 h1 {
-    font-size: clamp(4rem, 10vw, 9rem);
+    font-size: clamp(3.5rem, 7vw, 7.5rem);
 }
 
 h2 {
-    font-size: clamp(3rem, 7vw, 6rem);
+    font-size: clamp(2.8rem, 5vw, 5.5rem);
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
 }
 
 .eyebrow {
-    font-size: 0.75rem;
+    font-size: .72rem;
+    letter-spacing: .18em;
     color: var(--rust);
-    letter-spacing: 0.18em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
+/* NAV */
 
 header {
     position: sticky;
     top: 0;
-    z-index: 1000;
-    background: rgba(229, 217, 209, 0.94);
+    z-index: 100;
+    background: rgba(229,217,209,.94);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(63, 53, 48, 0.12);
+    border-bottom: 1px solid rgba(63,53,48,.1);
 }
 
 .navbar {
-    max-width: 1300px;
+    max-width: 1400px;
     margin: auto;
-    padding: 1.2rem 5%;
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 1.1rem;
-    letter-spacing: 0.12em;
+    font-size: 1rem;
+    letter-spacing: .14em;
 }
 
 .nav-links {
     display: flex;
+    gap: 1.5rem;
     align-items: center;
-    gap: 1.7rem;
 }
 
 .nav-links a {
-    font-family: "Donau", Arial, sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
+    font-size: .68rem;
+    letter-spacing: .12em;
 }
 
 .nav-button {
     background: var(--rust);
     color: var(--white);
-    padding: 0.8rem 1.3rem;
-    border-radius: 999px;
+    padding: .75rem 1.2rem;
+    border-radius: 100px;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-    min-height: 88vh;
-    display: flex;
+    min-height: 86vh;
+    padding: 5rem 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 7rem 6%;
-
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(224, 157, 148, 0.8),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(237, 183, 119, 0.7),
-            transparent 28%
-        ),
-        var(--cream);
+    max-width: 1500px;
+    margin: auto;
 }
 
-.hero-content {
-    max-width: 1000px;
+.hero-copy {
+    max-width: 700px;
 }
 
 .hero h1 {
-    margin-bottom: 2rem;
     color: var(--rust);
+    margin-bottom: 1.8rem;
 }
 
 .hero h1 span {
     color: var(--teal);
+    display: block;
 }
 
 .hero-text {
-    max-width: 720px;
-    margin: 0 auto;
-    font-size: 1.15rem;
+    max-width: 600px;
+    font-size: 1.05rem;
 }
 
 .hero-buttons {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2.5rem;
+    gap: .8rem;
+    margin-top: 2rem;
 }
-
-
-/* =========================
-   BUTTONS
-========================= */
 
 .button {
     display: inline-block;
-    padding: 1rem 1.7rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    padding: .95rem 1.5rem;
+    border-radius: 100px;
+    font-size: .7rem;
+    letter-spacing: .12em;
+    transition: transform .2s ease;
 }
 
 .button:hover {
     transform: translateY(-3px);
-    opacity: 0.9;
 }
 
 .primary {
@@ -217,208 +182,348 @@ header {
 }
 
 .secondary {
-    border: 2px solid var(--dark);
+    border: 1.5px solid var(--dark);
 }
 
+.hero-image {
+    height: 650px;
+    border-radius: 3rem;
+    overflow: hidden;
+    background: var(--teal);
+}
 
-/* =========================
-   INTRO
-========================= */
-
-.intro {
-    background: var(--white);
+.image-placeholder {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 9rem 6%;
+    padding: 2rem;
+    color: var(--white);
+    background: var(--teal);
+    font-family: "Donau", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+/* STATEMENT */
+
+.statement {
+    background: var(--rust);
+    color: var(--white);
+    padding: 9rem 7%;
+}
+
+.statement-inner {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.statement h2 {
+    max-width: 850px;
+    margin-bottom: 3rem;
+}
+
+.statement-lines {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.statement-lines p {
+    font-size: 1.15rem;
+}
+
+.statement-lines strong {
+    font-family: "Donau", Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+/* SECTION */
+
+.section {
+    padding: 8rem 5%;
 }
 
 .section-heading {
     max-width: 850px;
-    margin: auto;
+    margin: 0 auto 4rem;
+    text-align: center;
 }
 
-.section-heading h2 {
-    margin-bottom: 2rem;
-}
-
-.section-heading > p:last-child {
+.section-heading p:last-child {
     max-width: 650px;
-    margin: auto;
-    font-size: 1.1rem;
+    margin: 1.5rem auto 0;
 }
 
+/* SERVICES */
 
-/* =========================
-   FEATURE CARDS
-========================= */
+.services {
+    background: var(--white);
+    padding: 8rem 5%;
+}
 
-.three-columns {
+.service-grid {
     max-width: 1300px;
     margin: auto;
-    padding: 7rem 5%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
-.feature-card {
-    padding: 3rem 2.5rem;
-    border-radius: 2rem;
-    min-height: 390px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.service-card {
+    min-height: 560px;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 280px 1fr;
 }
 
-.feature-card:nth-child(1) {
+.service-photo {
     background: var(--teal);
 }
 
-.feature-card:nth-child(2) {
+.service-content {
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card:nth-child(1) .service-content {
+    background: var(--teal);
+}
+
+.service-card:nth-child(2) .service-content {
     background: var(--pink);
 }
 
-.feature-card:nth-child(3) {
+.service-card:nth-child(3) .service-content {
     background: var(--peach);
 }
 
-.feature-icon {
-    font-size: 3rem;
-    margin-bottom: auto;
+.service-card:nth-child(4) .service-content {
+    background: var(--rust);
+    color: var(--white);
 }
 
-.feature-card h2 {
-    font-size: 2.5rem;
+.service-content h3 {
     margin-bottom: 1rem;
 }
 
-.feature-card p:not(.eyebrow) {
+.service-link {
+    font-family: "Donau", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: .12em;
+    margin-top: 1.5rem;
+}
+
+/* PARENT SPACE */
+
+.parent-space {
+    background: var(--teal);
+    padding: 8rem 5%;
+}
+
+.parent-grid {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.parent-image {
+    height: 600px;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.parent-copy h2 {
     margin-bottom: 1.5rem;
 }
 
-.feature-card a {
-    font-size: 0.75rem;
+.parent-copy p {
+    max-width: 550px;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
 }
 
+/* WHY */
 
-/* =========================
-   BOOKING
-========================= */
+.why {
+    background: var(--cream);
+}
 
-.booking {
+.trust-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--dark);
+    border: 1px solid var(--dark);
+}
+
+.trust-card {
+    background: var(--cream);
+    padding: 3rem;
+    min-height: 280px;
+}
+
+.trust-card h3 {
+    margin: 1rem 0;
+}
+
+.trust-number {
+    font-family: "Donau", Arial, sans-serif;
+    color: var(--rust);
+}
+
+/* HOW IT WORKS */
+
+.how {
+    background: var(--white);
+}
+
+.steps {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.step {
+    padding: 2.5rem;
+    border-radius: 2rem;
+    background: var(--pink);
+}
+
+.step:nth-child(2) {
+    background: var(--peach);
+}
+
+.step:nth-child(3) {
+    background: var(--teal);
+}
+
+.step-number {
+    font-family: "Donau", Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.step h3 {
+    margin-bottom: .8rem;
+}
+
+/* COMMUNITY */
+
+.community {
+    padding: 8rem 5%;
+    background: var(--pink);
+}
+
+.community-grid {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.community-image {
+    height: 550px;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.community-copy h2 {
+    margin-bottom: 1.5rem;
+}
+
+.community-copy p {
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+}
+
+/* TEAM */
+
+.team {
+    background: var(--white);
+}
+
+.team-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+}
+
+.team-photo {
+    height: 330px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background: var(--teal);
+}
+
+.team-name {
+    font-family: "Donau", Arial, sans-serif;
+    text-transform: uppercase;
+    margin-top: .8rem;
+    font-size: .8rem;
+}
+
+/* CTA */
+
+.final-cta {
     background: var(--rust);
     color: var(--white);
     text-align: center;
-    padding: 8rem 6%;
+    padding: 9rem 5%;
 }
 
-.booking .eyebrow {
+.final-cta-inner {
+    max-width: 950px;
+    margin: auto;
+}
+
+.final-cta h2 {
+    margin-bottom: 2rem;
+}
+
+.final-cta p {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+}
+
+.final-cta .eyebrow {
     color: var(--peach);
 }
 
-.booking h2 {
-    max-width: 900px;
-    margin: auto;
-}
-
-.booking-content > p:not(.eyebrow) {
-    max-width: 600px;
-    margin: 2rem auto;
-}
-
-.booking-buttons {
-    max-width: 850px;
-    margin: 3rem auto 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-
-.booking-button {
-    background: var(--cream);
-    color: var(--dark);
-    padding: 1.3rem;
-    border-radius: 1.2rem;
-    font-size: 0.8rem;
-    transition: transform 0.2s ease;
-}
-
-.booking-button:hover {
-    transform: translateY(-3px);
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about {
-    background: var(--teal);
-    padding: 9rem 6%;
-}
-
-.about-content {
-    max-width: 850px;
-    margin: auto;
-}
-
-.about h2 {
-    margin-bottom: 2rem;
-}
-
-.about p:not(.eyebrow) {
-    max-width: 700px;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-    background: var(--pink);
-    text-align: center;
-    padding: 9rem 6%;
-}
-
-.contact-content {
-    max-width: 850px;
-    margin: auto;
-}
-
-.contact h2 {
-    margin-bottom: 2rem;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     background: var(--dark);
     color: var(--cream);
     text-align: center;
-    padding: 4rem 6%;
+    padding: 4rem 5%;
 }
 
 .footer-logo {
     font-family: "Donau", Arial, sans-serif;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.8rem;
+    letter-spacing: .14em;
+    margin-bottom: 1rem;
 }
 
-footer p {
-    font-size: 0.85rem;
-    opacity: 0.75;
-    margin-top: 0.4rem;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 850px) {
 
@@ -426,41 +531,65 @@ footer p {
         display: none;
     }
 
-    .navbar {
-        padding: 1rem 5%;
-    }
-
-    section,
-    .intro,
-    .about,
-    .contact,
-    .booking {
-        padding: 6rem 6%;
+    .hero,
+    .parent-grid,
+    .community-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero {
-        min-height: 78vh;
-        padding: 5rem 6%;
+        padding: 4rem 6%;
+        min-height: auto;
+    }
+
+    .hero-image {
+        height: 450px;
+        order: -1;
     }
 
     .hero h1 {
-        font-size: clamp(3.5rem, 16vw, 6rem);
+        font-size: clamp(3.2rem, 14vw, 5.5rem);
     }
 
-    .hero-text {
-        font-size: 1rem;
-    }
-
-    .three-columns {
+    .statement-lines,
+    .steps {
         grid-template-columns: 1fr;
-        padding: 5rem 6%;
     }
 
-    .feature-card {
-        min-height: 350px;
-    }
-
-    .booking-buttons {
+    .service-grid,
+    .trust-grid {
         grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+
+    .parent-image,
+    .community-image {
+        height: 400px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section,
+    .services,
+    .parent-space,
+    .community,
+    .final-cta {
+        padding: 6rem 6%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-photo {
+        height: 220px;
     }
 }
