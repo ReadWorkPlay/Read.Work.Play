@@ -1,0 +1,562 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Partner With Read.Work.Play | Family-Friendly Experiences</title>
+
+    <style>
+        :root {
+            --sage: #7F9B97;
+            --blush: #E09D94;
+            --gold: #EDB777;
+            --cream: #E5D9D1;
+            --brown: #A24F2F;
+            --deep-brown: #4A3028;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--deep-brown);
+            background: var(--cream);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+
+        nav {
+            background: var(--white);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(74, 48, 40, 0.08);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.15rem;
+            color: var(--brown);
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--brown);
+        }
+
+        .nav-button {
+            background: var(--brown);
+            color: var(--white) !important;
+            padding: 10px 18px;
+            border-radius: 30px;
+        }
+
+        /* Hero */
+
+        .hero {
+            background: var(--sage);
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .intro {
+            background: var(--white);
+            text-align: center;
+        }
+
+        .intro p {
+            max-width: 850px;
+            margin: 0 auto 20px;
+            font-size: 1.08rem;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--brown);
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Opportunity Cards */
+
+        .opportunities {
+            background: var(--cream);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(74, 48, 40, 0.07);
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card h3 {
+            color: var(--brown);
+            font-size: 1.1rem;
+        }
+
+        /* Why Partner */
+
+        .why {
+            background: var(--white);
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .benefit {
+            background: var(--cream);
+            padding: 25px;
+            border-radius: 16px;
+        }
+
+        .benefit strong {
+            color: var(--brown);
+        }
+
+        /* Approach */
+
+        .approach {
+            background: var(--blush);
+            text-align: center;
+        }
+
+        .pillars {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 35px auto 45px;
+            max-width: 900px;
+        }
+
+        .pillar {
+            background: var(--white);
+            padding: 14px 24px;
+            border-radius: 40px;
+            font-weight: bold;
+            color: var(--brown);
+        }
+
+        .approach-text {
+            max-width: 850px;
+            margin: 0 auto;
+            font-size: 1.08rem;
+        }
+
+        .approach-text strong {
+            display: block;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            color: var(--deep-brown);
+        }
+
+        /* CTA */
+
+        .cta {
+            background: var(--brown);
+            color: var(--white);
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 18px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--deep-brown);
+            padding: 16px 32px;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+
+        footer {
+            background: var(--deep-brown);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 800px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-inner {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 75px 20px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <div class="container nav-inner">
+
+            <div class="logo">
+                Read.Work.Play
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#community">Community</a>
+                <a href="partnerships.html">Partnerships</a>
+                <a href="#enquire" class="nav-button">Partner With Us</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+
+    <header class="hero">
+
+        <div class="container">
+
+            <h1>Partner With Read.Work.Play</h1>
+
+            <p>
+                Creating More Supportive, Family-Friendly Experiences Together
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- Introduction -->
+
+    <section class="intro">
+
+        <div class="container">
+
+            <p>
+                At Read.Work.Play, we believe modern families deserve environments
+                that feel more supportive, inclusive, and thoughtfully designed around
+                real life.
+            </p>
+
+            <p>
+                We partner with brands, venues, events, businesses, and community spaces
+                that share a similar vision — creating experiences where parents feel
+                more supported and children feel safe, welcomed, and cared for.
+            </p>
+
+            <p>
+                Our partnerships are built around meaningful collaboration, trust,
+                and creating value for both families and businesses.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Partnership Opportunities -->
+
+    <section class="opportunities">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Partnership Opportunities</h2>
+
+                <p>
+                    There are many ways we can work together to make family-friendly
+                    experiences more accessible and enjoyable.
+                </p>
+
+            </div>
+
+            <div class="card-grid">
+
+                <div class="card">
+                    <h3>Pop-Up Childcare Experiences</h3>
+                </div>
+
+                <div class="card">
+                    <h3>Wedding &amp; Event Childcare Support</h3>
+                </div>
+
+                <div class="card">
+                    <h3>Family-Friendly Activations</h3>
+                </div>
+
+                <div class="card">
+                    <h3>Lifestyle &amp; Community Collaborations</h3>
+                </div>
+
+                <div class="card">
+                    <h3>Parent-Focused Events &amp; Experiences</h3>
+                </div>
+
+                <div class="card">
+                    <h3>Hospitality &amp; Venue Childcare Support</h3>
+                </div>
+
+                <div class="card">
+                    <h3>Brand &amp; Community Collaborations</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why Partner -->
+
+    <section class="why">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Why Partner With Read.Work.Play?</h2>
+
+                <p>
+                    We help create calmer, more accessible experiences for families
+                    by offering thoughtful childcare support within a variety of environments.
+                </p>
+
+            </div>
+
+            <div class="benefits">
+
+                <div class="benefit">
+                    <strong>Improve family accessibility</strong>
+                    <p>Help families participate more comfortably in experiences and events.</p>
+                </div>
+
+                <div class="benefit">
+                    <strong>Enhance guest &amp; customer experience</strong>
+                    <p>Create an experience that considers the needs of the whole family.</p>
+                </div>
+
+                <div class="benefit">
+                    <strong>Encourage longer engagement</strong>
+                    <p>Give parents greater freedom to enjoy the experience while their children are thoughtfully cared for.</p>
+                </div>
+
+                <div class="benefit">
+                    <strong>Create more inclusive environments</strong>
+                    <p>Make spaces more welcoming and accessible for parents and caregivers.</p>
+                </div>
+
+                <div class="benefit">
+                    <strong>Strengthen community connection &amp; trust</strong>
+                    <p>Build positive experiences that families remember and want to return to.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Our Approach -->
+
+    <section class="approach">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Our Approach</h2>
+
+                <p>
+                    Every Read.Work.Play experience is designed with care,
+                    emotional reassurance, and professionalism at the centre.
+                </p>
+
+            </div>
+
+            <div class="pillars">
+
+                <div class="pillar">Calm</div>
+                <div class="pillar">Safe</div>
+                <div class="pillar">Supportive</div>
+                <div class="pillar">Thoughtfully Structured</div>
+                <div class="pillar">Family-Conscious</div>
+
+            </div>
+
+            <div class="approach-text">
+
+                <p>
+                    Whether supporting a wedding, event, lifestyle space, or community
+                    activation, our goal is always the same:
+                </p>
+
+                <strong>
+                    To help families feel more supported while creating positive,
+                    meaningful experiences for everyone involved.
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta" id="enquire">
+
+        <div class="container">
+
+            <h2>Let's Create Something Meaningful Together</h2>
+
+            <p>
+                We would love to explore opportunities to collaborate with aligned
+                businesses, venues, brands, and community spaces.
+            </p>
+
+            <a href="mailto:hello@readworkplay.co.za" class="cta-button">
+                ENQUIRE / PARTNER WITH US
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © Read.Work.Play — Creating more supportive experiences for modern families.
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
