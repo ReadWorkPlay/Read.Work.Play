@@ -603,6 +603,46 @@ footer {
 
 .trust-card p,
 .step p,
+    /* Booking Terms & Conditions */
+.booking-terms {
+  padding: 30px 20px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background: #faf8f4;
+}
+
+.terms-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.booking-terms h3 {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.booking-terms p {
+  font-size: 10px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+  color: #666;
+}
+
+.booking-terms strong {
+  color: #4a4038;
+}
+
+.terms-contact {
+  margin-top: 18px !important;
+}
+
+.booking-terms a {
+  color: inherit;
+  text-decoration: underline;
+}
 .parent-copy p,
 .community-copy p {
     font-size: 1rem;
