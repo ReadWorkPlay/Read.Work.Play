@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Partner With Read.Work.Play | Family-Friendly Experiences</title>
+    <title>Partnerships | Read.Work.Play</title>
 
     <style>
         :root {
@@ -16,6 +15,7 @@
             --brown: #A24F2F;
             --deep-brown: #4A3028;
             --white: #FFFFFF;
+            --soft-cream: #F4EEE9;
         }
 
         * {
@@ -24,31 +24,34 @@
             padding: 0;
         }
 
-@font-face {
-    font-family: "Donau";
-    src: url("Donau%20Neue_Uppercase.otf") format("opentype");
-    font-weight: 400;
-    font-style: normal;
-}
+        @font-face {
+            font-family: "Donau";
+            src: url("Donau%20Neue_Uppercase.otf") format("opentype");
+            font-weight: 400;
+            font-style: normal;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    color: var(--deep-brown);
-    background: var(--cream);
-    line-height: 1.7;
-}
-        
-h1,
-h2,
-h3,
-.logo,
-.eyebrow,
-.nav-links,
-.nav-button,
-.cta-button,
-.pillar {
-    font-family: "Donau", Arial, sans-serif;
-}
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--deep-brown);
+            background: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3,
+        .logo,
+        .eyebrow,
+        .nav-links,
+        .button,
+        .partnership-number {
+            font-family: "Donau", Arial, sans-serif;
+        }
+
         a {
             text-decoration: none;
             color: inherit;
@@ -56,45 +59,50 @@ h3,
 
         .container {
             width: 90%;
-            max-width: 1150px;
+            max-width: 1180px;
             margin: 0 auto;
         }
 
-        /* Navigation */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
-            background: var(--white);
+            background: rgba(255,255,255,0.97);
             padding: 18px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(74, 48, 40, 0.08);
+            box-shadow: 0 2px 14px rgba(74, 48, 40, 0.06);
         }
 
         .nav-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            gap: 25px;
         }
 
         .logo {
-            font-weight: bold;
             font-size: 1.15rem;
+            font-weight: bold;
             color: var(--brown);
             letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
         .nav-links {
             display: flex;
-            gap: 25px;
             align-items: center;
+            gap: 24px;
             flex-wrap: wrap;
         }
 
         .nav-links a {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
+            transition: 0.2s ease;
         }
 
         .nav-links a:hover {
@@ -104,205 +112,390 @@ h3,
         .nav-button {
             background: var(--brown);
             color: var(--white) !important;
-            padding: 10px 18px;
+            padding: 10px 19px;
             border-radius: 30px;
         }
 
-        /* Hero */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
+            position: relative;
             background: var(--sage);
             color: var(--white);
-            padding: 100px 20px;
-            text-align: center;
+            padding: 105px 20px 120px;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            left: -5%;
+            right: -5%;
+            bottom: -80px;
+            height: 150px;
+            background: var(--cream);
+            border-radius: 50% 50% 0 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            opacity: 0.9;
         }
 
         .hero h1 {
-            font-size: clamp(2.4rem, 6vw, 4.5rem);
-            line-height: 1.1;
-            margin-bottom: 25px;
+            font-size: clamp(3.1rem, 8vw, 6.5rem);
+            line-height: 0.95;
+            max-width: 850px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
         }
 
         .hero p {
-            max-width: 750px;
-            margin: 0 auto;
-            font-size: 1.2rem;
+            max-width: 650px;
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            line-height: 1.6;
         }
 
-        /* Sections */
 
-        section {
-            padding: 80px 0;
-        }
+        /* =========================
+           INTRO
+        ========================= */
 
         .intro {
-            background: var(--white);
-            text-align: center;
+            background: var(--cream);
+            padding: 70px 0 105px;
         }
 
-        .intro p {
-            max-width: 850px;
-            margin: 0 auto 20px;
-            font-size: 1.08rem;
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.4fr;
+            gap: 80px;
+            align-items: start;
         }
 
-        .section-heading {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-heading h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
+        .intro-label {
             color: var(--brown);
-            margin-bottom: 12px;
+            font-family: "Donau", Arial, sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
         }
 
-        .section-heading p {
+        .intro-copy h2 {
+            font-size: clamp(2.1rem, 4.5vw, 3.7rem);
+            line-height: 1.05;
+            color: var(--brown);
+            margin-bottom: 28px;
+        }
+
+        .intro-copy p {
+            font-size: 1.08rem;
             max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Opportunity Cards */
-
-        .opportunities {
-            background: var(--cream);
-        }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(74, 48, 40, 0.07);
-            min-height: 150px;
-            display: flex;
-            align-items: center;
-        }
-
-        .card h3 {
-            color: var(--brown);
-            font-size: 1.1rem;
-        }
-
-        /* Why Partner */
-
-        .why {
-            background: var(--white);
-        }
-
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .benefit {
-            background: var(--cream);
-            padding: 25px;
-            border-radius: 16px;
-        }
-
-        .benefit strong {
-            color: var(--brown);
-        }
-
-        /* Approach */
-
-        .approach {
-            background: var(--blush);
-            text-align: center;
-        }
-
-        .pillars {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin: 35px auto 45px;
-            max-width: 900px;
-        }
-
-        .pillar {
-            background: var(--white);
-            padding: 14px 24px;
-            border-radius: 40px;
-            font-weight: bold;
-            color: var(--brown);
-        }
-
-        .approach-text {
-            max-width: 850px;
-            margin: 0 auto;
-            font-size: 1.08rem;
-        }
-
-        .approach-text strong {
-            display: block;
-            font-size: 1.3rem;
-            margin-top: 20px;
-            color: var(--deep-brown);
-        }
-
-        /* CTA */
-
-        .cta {
-            background: var(--brown);
-            color: var(--white);
-            text-align: center;
-            padding: 90px 20px;
-        }
-
-        .cta h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 18px;
         }
 
+        .intro-copy p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           PARTNERSHIP OPPORTUNITIES
+        ========================= */
+
+        .opportunities {
+            background: var(--white);
+            padding: 105px 0;
+        }
+
+        .section-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 40px;
+            margin-bottom: 55px;
+        }
+
+        .section-top h2 {
+            color: var(--brown);
+            font-size: clamp(2.4rem, 5vw, 4.2rem);
+            line-height: 1;
+            max-width: 600px;
+        }
+
+        .section-top p {
+            max-width: 390px;
+            font-size: 1rem;
+        }
+
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 18px;
+        }
+
+        .partnership-card {
+            position: relative;
+            min-height: 255px;
+            padding: 30px;
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .partnership-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(74,48,40,0.10);
+        }
+
+        .partnership-card:nth-child(1) {
+            grid-column: span 3;
+            background: var(--cream);
+        }
+
+        .partnership-card:nth-child(2) {
+            grid-column: span 3;
+            background: var(--blush);
+        }
+
+        .partnership-card:nth-child(3) {
+            grid-column: span 2;
+            background: var(--sage);
+            color: var(--white);
+        }
+
+        .partnership-card:nth-child(4) {
+            grid-column: span 2;
+            background: var(--gold);
+        }
+
+        .partnership-card:nth-child(5) {
+            grid-column: span 2;
+            background: var(--soft-cream);
+        }
+
+        .partnership-card:nth-child(6) {
+            grid-column: span 3;
+            background: var(--deep-brown);
+            color: var(--white);
+        }
+
+        .partnership-card:nth-child(7) {
+            grid-column: span 3;
+            background: var(--brown);
+            color: var(--white);
+        }
+
+        .partnership-number {
+            font-size: 0.8rem;
+            opacity: 0.65;
+        }
+
+        .partnership-card h3 {
+            font-size: clamp(1.15rem, 2vw, 1.55rem);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .partnership-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0.85;
+        }
+
+
+        /* =========================
+           BELIEF SECTION
+        ========================= */
+
+        .belief {
+            background: var(--blush);
+            padding: 110px 0;
+            text-align: center;
+        }
+
+        .belief-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .belief .eyebrow {
+            color: var(--deep-brown);
+        }
+
+        .belief h2 {
+            color: var(--deep-brown);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 0.98;
+            margin-bottom: 30px;
+        }
+
+        .belief p {
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+
+        /* =========================
+           WHY COLLABORATE
+        ========================= */
+
+        .why {
+            background: var(--cream);
+            padding: 110px 0;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.4fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .why-heading h2 {
+            color: var(--brown);
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .why-heading p {
+            font-size: 1rem;
+        }
+
+        .why-list {
+            border-top: 1px solid rgba(74,48,40,0.2);
+        }
+
+        .why-item {
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(74,48,40,0.2);
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            gap: 20px;
+        }
+
+        .why-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brown);
+            font-family: "Donau", Arial, sans-serif;
+            font-size: 0.8rem;
+        }
+
+        .why-item h3 {
+            color: var(--brown);
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+        }
+
+        .why-item p {
+            font-size: 0.92rem;
+            max-width: 600px;
+        }
+
+
+        /* =========================
+           COLLABORATION CTA
+        ========================= */
+
+        .cta {
+            position: relative;
+            background: var(--brown);
+            color: var(--white);
+            padding: 115px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: "RWP";
+            position: absolute;
+            font-family: "Donau", Arial, sans-serif;
+            font-size: 18rem;
+            line-height: 1;
+            opacity: 0.05;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta h2 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 0.98;
+            margin-bottom: 25px;
+        }
+
         .cta p {
-            max-width: 700px;
-            margin: 0 auto 30px;
+            max-width: 650px;
+            margin: 0 auto 35px;
+            font-size: 1.05rem;
         }
 
         .cta-button {
             display: inline-block;
             background: var(--gold);
             color: var(--deep-brown);
-            padding: 16px 32px;
+            padding: 16px 30px;
             border-radius: 40px;
-            font-weight: bold;
-            font-size: 1rem;
+            font-family: "Donau", Arial, sans-serif;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease, opacity 0.2s ease;
         }
 
         .cta-button:hover {
-            opacity: 0.9;
+            transform: translateY(-2px);
+            opacity: 0.92;
         }
 
-        /* Footer */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: var(--deep-brown);
             color: var(--white);
             text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9rem;
+            padding: 28px 20px;
+            font-size: 0.85rem;
         }
 
-        /* Mobile */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .benefits {
-                grid-template-columns: 1fr;
-            }
 
             .nav-inner {
                 flex-direction: column;
@@ -310,15 +503,84 @@ h3,
 
             .nav-links {
                 justify-content: center;
-                gap: 15px;
+                gap: 12px 18px;
+            }
+
+            .nav-links a {
+                font-size: 0.8rem;
             }
 
             .hero {
-                padding: 75px 20px;
+                padding: 75px 20px 100px;
             }
 
-            section {
-                padding: 60px 0;
+            .hero h1 {
+                font-size: clamp(3rem, 15vw, 5rem);
+            }
+
+            .intro {
+                padding: 60px 0 80px;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .section-top {
+                display: block;
+                margin-bottom: 40px;
+            }
+
+            .section-top h2 {
+                margin-bottom: 20px;
+            }
+
+            .partnership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .partnership-card:nth-child(n) {
+                grid-column: span 1;
+                min-height: 210px;
+            }
+
+            .belief,
+            .why,
+            .opportunities {
+                padding: 75px 0;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .cta {
+                padding: 85px 20px;
+            }
+
+            .cta::before {
+                font-size: 9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .nav-links {
+                gap: 10px 14px;
+            }
+
+            .nav-button {
+                padding: 9px 15px;
+            }
+
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+
+            .partnership-card {
+                padding: 25px;
             }
         }
     </style>
@@ -326,7 +588,7 @@ h3,
 
 <body>
 
-    <!-- Navigation -->
+    <!-- NAVIGATION -->
 
     <nav>
         <div class="container nav-inner">
@@ -347,16 +609,24 @@ h3,
     </nav>
 
 
-    <!-- Hero -->
+    <!-- HERO -->
 
     <header class="hero">
 
-        <div class="container">
+        <div class="container hero-content">
 
-            <h1>Partner With Read.Work.Play</h1>
+            <div class="eyebrow">
+                PARTNERSHIPS
+            </div>
+
+            <h1>
+                Let's create something <span>good</span> together.
+            </h1>
 
             <p>
-                Creating More Supportive, Family-Friendly Experiences Together
+                Read.Work.Play brings people, families and businesses together.
+                We love collaborating with people who want to create meaningful
+                experiences and make family life feel a little more supported.
             </p>
 
         </div>
@@ -364,79 +634,172 @@ h3,
     </header>
 
 
-    <!-- Introduction -->
+    <!-- INTRO -->
 
     <section class="intro">
 
-        <div class="container">
+        <div class="container intro-grid">
 
-            <p>
-                At Read.Work.Play, we believe modern families deserve environments
-                that feel more supportive, inclusive, and thoughtfully designed around
-                real life.
-            </p>
+            <div class="intro-label">
+                WE BELIEVE IN
+            </div>
 
-            <p>
-                We partner with brands, venues, events, businesses, and community spaces
-                that share a similar vision — creating experiences where parents feel
-                more supported and children feel safe, welcomed, and cared for.
-            </p>
+            <div class="intro-copy">
 
-            <p>
-                Our partnerships are built around meaningful collaboration, trust,
-                and creating value for both families and businesses.
-            </p>
+                <h2>
+                    Good people doing good things together.
+                </h2>
+
+                <p>
+                    We don't believe in partnerships just for the sake of having
+                    another logo next to ours.
+                </p>
+
+                <p>
+                    We want to work with people who genuinely care about families,
+                    community and creating experiences that make life a little better.
+                </p>
+
+                <p>
+                    Sometimes that's a workshop. Sometimes it's an event, a pop-up,
+                    a giveaway or a completely new idea we've never thought of before.
+                </p>
+
+                <p>
+                    If it brings real value to our community, we're interested.
+                </p>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- Partnership Opportunities -->
+    <!-- OPPORTUNITIES -->
 
     <section class="opportunities">
 
         <div class="container">
 
-            <div class="section-heading">
+            <div class="section-top">
 
-                <h2>Partnership Opportunities</h2>
+                <h2>
+                    What could we create together?
+                </h2>
 
                 <p>
-                    There are many ways we can work together to make family-friendly
-                    experiences more accessible and enjoyable.
+                    There are lots of ways to collaborate. These are just a few
+                    ideas to get the conversation started.
                 </p>
 
             </div>
 
-            <div class="card-grid">
 
-                <div class="card">
-                    <h3>Pop-Up Childcare Experiences</h3>
+            <div class="partnership-grid">
+
+                <div class="partnership-card">
+
+                    <div class="partnership-number">01</div>
+
+                    <div>
+                        <h3>Workshops &amp; Talks</h3>
+                        <p>
+                            Share your knowledge, skills or passion with our
+                            moms and families.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Wedding &amp; Event Childcare Support</h3>
+
+                <div class="partnership-card">
+
+                    <div class="partnership-number">02</div>
+
+                    <div>
+                        <h3>Events &amp; Experiences</h3>
+                        <p>
+                            Create something memorable for families at one
+                            of our spaces or at your event.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Family-Friendly Activations</h3>
+
+                <div class="partnership-card">
+
+                    <div class="partnership-number">03</div>
+
+                    <div>
+                        <h3>Wellness</h3>
+                        <p>
+                            Bring practical support and expertise to our
+                            growing community of moms.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Lifestyle &amp; Community Collaborations</h3>
+
+                <div class="partnership-card">
+
+                    <div class="partnership-number">04</div>
+
+                    <div>
+                        <h3>Local Businesses</h3>
+                        <p>
+                            Pop-ups, special offers, collaborations and
+                            community initiatives.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Parent-Focused Events &amp; Experiences</h3>
+
+                <div class="partnership-card">
+
+                    <div class="partnership-number">05</div>
+
+                    <div>
+                        <h3>Children &amp; Families</h3>
+                        <p>
+                            Bring play, creativity, learning or movement
+                            to our little people.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Hospitality &amp; Venue Childcare Support</h3>
+
+                <div class="partnership-card">
+
+                    <div class="partnership-number">06</div>
+
+                    <div>
+                        <h3>Brands &amp; Giveaways</h3>
+                        <p>
+                            Connect your brand with a community that values
+                            thoughtful, family-focused products and experiences.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Brand &amp; Community Collaborations</h3>
+
+                <div class="partnership-card">
+
+                    <div class="partnership-number">07</div>
+
+                    <div>
+                        <h3>Pop-Up Childcare</h3>
+                        <p>
+                            Bring the Read.Work.Play experience to weddings,
+                            venues, hospitality spaces and special events.
+                        </p>
+                    </div>
+
                 </div>
 
             </div>
@@ -446,95 +809,116 @@ h3,
     </section>
 
 
-    <!-- Why Partner -->
+    <!-- BELIEF -->
+
+    <section class="belief">
+
+        <div class="container belief-inner">
+
+            <div class="eyebrow">
+                MORE THAN A VENUE
+            </div>
+
+            <h2>
+                We bring the space.<br>
+                You bring the magic.
+            </h2>
+
+            <p>
+                Read.Work.Play is more than somewhere children can play.
+                We're building a community around connection, support and
+                making space for the people who make family life what it is.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY COLLABORATE -->
 
     <section class="why">
 
-        <div class="container">
+        <div class="container why-grid">
 
-            <div class="section-heading">
+            <div class="why-heading">
 
-                <h2>Why Partner With Read.Work.Play?</h2>
+                <div class="eyebrow">
+                    WHY RWP?
+                </div>
+
+                <h2>
+                    Let's make family-friendly feel easy.
+                </h2>
 
                 <p>
-                    We help create calmer, more accessible experiences for families
-                    by offering thoughtful childcare support within a variety of environments.
+                    When you partner with us, you're not simply hiring a space.
+                    You're becoming part of a community.
                 </p>
 
             </div>
 
-            <div class="benefits">
 
-                <div class="benefit">
-                    <strong>Improve family accessibility</strong>
-                    <p>Help families participate more comfortably in experiences and events.</p>
+            <div class="why-list">
+
+                <div class="why-item">
+
+                    <div class="why-icon">01</div>
+
+                    <div>
+                        <h3>Reach real families</h3>
+                        <p>
+                            Connect with parents who are actively looking for
+                            support, connection and meaningful experiences.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="benefit">
-                    <strong>Enhance guest &amp; customer experience</strong>
-                    <p>Create an experience that considers the needs of the whole family.</p>
+
+                <div class="why-item">
+
+                    <div class="why-icon">02</div>
+
+                    <div>
+                        <h3>Create better experiences</h3>
+                        <p>
+                            Make your event, service or space more welcoming
+                            and enjoyable for the whole family.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="benefit">
-                    <strong>Encourage longer engagement</strong>
-                    <p>Give parents greater freedom to enjoy the experience while their children are thoughtfully cared for.</p>
+
+                <div class="why-item">
+
+                    <div class="why-icon">03</div>
+
+                    <div>
+                        <h3>Build genuine connection</h3>
+                        <p>
+                            We care about relationships, not just transactions.
+                            Our best collaborations grow from shared values.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="benefit">
-                    <strong>Create more inclusive environments</strong>
-                    <p>Make spaces more welcoming and accessible for parents and caregivers.</p>
+
+                <div class="why-item">
+
+                    <div class="why-icon">04</div>
+
+                    <div>
+                        <h3>Try something different</h3>
+                        <p>
+                            Have an idea that doesn't fit neatly into a box?
+                            Good. We like those ideas.
+                        </p>
+                    </div>
+
                 </div>
-
-                <div class="benefit">
-                    <strong>Strengthen community connection &amp; trust</strong>
-                    <p>Build positive experiences that families remember and want to return to.</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Our Approach -->
-
-    <section class="approach">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <h2>Our Approach</h2>
-
-                <p>
-                    Every Read.Work.Play experience is designed with care,
-                    emotional reassurance, and professionalism at the centre.
-                </p>
-
-            </div>
-
-            <div class="pillars">
-
-                <div class="pillar">Calm</div>
-                <div class="pillar">Safe</div>
-                <div class="pillar">Supportive</div>
-                <div class="pillar">Thoughtfully Structured</div>
-                <div class="pillar">Family-Conscious</div>
-
-            </div>
-
-            <div class="approach-text">
-
-                <p>
-                    Whether supporting a wedding, event, lifestyle space, or community
-                    activation, our goal is always the same:
-                </p>
-
-                <strong>
-                    To help families feel more supported while creating positive,
-                    meaningful experiences for everyone involved.
-                </strong>
 
             </div>
 
@@ -547,17 +931,23 @@ h3,
 
     <section class="cta" id="enquire">
 
-        <div class="container">
+        <div class="container cta-content">
 
-            <h2>Let's Create Something Meaningful Together</h2>
+            <div class="eyebrow">
+                HAVE AN IDEA?
+            </div>
+
+            <h2>
+                Let's talk.
+            </h2>
 
             <p>
-                We would love to explore opportunities to collaborate with aligned
-                businesses, venues, brands, and community spaces.
+                Whether you've got a fully formed idea or just something
+                you're wondering about, we'd love to hear from you.
             </p>
 
             <a href="mailto:hello@readworkplay.co.za" class="cta-button">
-                ENQUIRE / PARTNER WITH US
+                LET'S COLLABORATE
             </a>
 
         </div>
@@ -565,7 +955,7 @@ h3,
     </section>
 
 
-    <!-- Footer -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -577,4 +967,3 @@ h3,
 
 </body>
 </html>
-```
