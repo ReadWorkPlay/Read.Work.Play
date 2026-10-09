@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memberships | Read.Work.Play</title>
+  <meta name="description" content="Find the Read.Work.Play membership that fits your family. A little breathing room for busy moms.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .memberships-page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      color: #4A3028;
+    }
+    .memberships-hero {
+      text-align: center;
+      padding: 36px 12px 42px;
+    }
+    .memberships-hero .eyebrow {
+      color: #A24F2F;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: .85rem;
+    }
+    .memberships-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin: 12px 0;
+    }
+    .memberships-hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    .membership-section {
+      margin: 26px 0 44px;
+    }
+    .membership-section > h2,
+    .membership-section > p {
+      text-align: center;
+    }
+    .membership-section > p {
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .membership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 285px), 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+    .membership-card {
+      display: flex;
+      flex-direction: column;
+      background: #FFFAF6;
+      border: 1px solid #E5D9D1;
+      border-radius: 18px;
+      padding: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(74, 48, 40, .06);
+    }
+    .membership-card.featured {
+      border: 2px solid #7F9B97;
+    }
+    .membership-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 18px;
+    }
+    .membership-card h3 {
+      font-size: 1.35rem;
+      margin: 0 0 8px;
+    }
+    .membership-price {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #A24F2F;
+      margin: 6px 0 0;
+    }
+    .membership-frequency {
+      font-size: .9rem;
+      margin: 0 0 14px;
+    }
+    .membership-card ul {
+      padding-left: 20px;
+      line-height: 1.8;
+      margin: 0 0 24px;
+    }
+    .membership-card form {
+      text-align: center;
+      margin-top: auto;
+    }
+    .membership-card input[type="image"] {
+      max-width: 100%;
+    }
+    .membership-button {
+      display: inline-block;
+      margin-top: auto;
+      padding: 13px 18px;
+      border-radius: 30px;
+      background: #7F9B97;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 600;
+    }
+    .membership-button:hover {
+      background: #4A3028;
+    }
+    .membership-terms {
+      background: #F3EBE5;
+      border-radius: 16px;
+      padding: 24px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+    .membership-terms h2 {
+      margin-top: 0;
+    }
+    .membership-contact {
+      text-align: center;
+      line-height: 1.8;
+      margin-top: 36px;
+    }
+    @media (max-width: 600px) {
+      .memberships-page {
+        padding: 18px 14px 40px;
+      }
+      .memberships-hero {
+        padding: 24px 4px 30px;
+      }
+      .membership-card {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="memberships-page">
+
+    <header class="memberships-hero">
+      <p class="eyebrow">REST. WORK. PLAY. GROW.</p>
+      <h1>A little breathing room for busy moms</h1>
+      <p>Some days you need a few hours to catch up. Some days you need a place to work. And sometimes you just need to know you're not doing motherhood alone. Find the membership that fits your family.</p>
+    </header>
+
+    <section class="membership-section">
+      <h2>Childcare memberships</h2>
+      <p>Flexible, caring support for your little ones, and a little more breathing room for you.</p>
+
+      <div class="membership-grid">
+
+        <article class="membership-card featured">
+          <img class="membership-image" src="Basic%20.png" alt="Basic Childcare Membership" loading="lazy">
+          <h3>Basic Membership</h3>
+          <p class="membership-price">R490</p>
+          <p class="membership-frequency">per month</p>
+          <ul>
+            <li>4 childcare hours per month</li>
+            <li>Flexible support for your family's needs</li>
+            <li>A caring, supervised environment</li>
+          </ul>
+          <form action="https://payment.payfast.io/eng/process" method="post">
+            <input type="hidden" name="cmd" value="_paynow">
+            <input type="hidden" name="receiver" value="25093428">
+            <input type="hidden" name="amount" value="490">
+            <input type="hidden" name="item_name" value="Basic Membership">
+            <input type="hidden" name="item_description" value="4 childcare hours per month in a caring, supervised environment.">
+            <input type="hidden" name="subscription_type" value="1">
+            <input type="hidden" name="recurring_amount" value="490">
+            <input type="hidden" name="cycles" value="0">
+            <input type="hidden" name="frequency" value="3">
+            <input type="image" src="https://my.payfast.io/images/buttons/Subscribe/Primary-Large-Subscribe.png" alt="Subscribe to Basic Membership with PayFast">
+          </form>
+        </article>
+
+        <article class="membership-card">
+          <img class="membership-image" src="Standard.png" alt="Standard Childcare Membership" loading="lazy">
+          <h3>Standard Membership</h3>
+          <p class="membership-price">R950</p>
+          <p class="membership-frequency">per month</p>
+          <ul>
+            <li>10 childcare hours per month</li>
+            <li>More flexibility for busy weeks</li>
+            <li>A caring, supervised environment</li>
+          </ul>
+          <a class="membership-button" href="mailto:cpt.readworkplay@gmail.com?subject=Standard%20Membership%20Enquiry">Enquire about this membership</a>
+        </article>
+
+        <article class="membership-card">
+          <img class="membership-image" src="Premium.png" alt="Premium Childcare Membership" loading="lazy">
+          <h3>Premium Membership</h3>
+          <p class="membership-price">R1,650</p>
+          <p class="membership-frequency">per month</p>
+          <ul>
+            <li>25 childcare hours per month</li>
+            <li>Priority booking</li>
+            <li>1 included activity</li>
+          </ul>
+          <a class="membership-button" href="mailto:cpt.readworkplay@gmail.com?subject=Premium%20Membership%20Enquiry">Enquire about this membership</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="membership-section">
+      <h2>Co-working memberships</h2>
+      <p>A place to get things done while your little one is cared for nearby. Parents remain onsite during co-working sessions.</p>
+
+      <div class="membership-grid">
+
+        <article class="membership-card">
+          <img class="membership-image" src="Lite.png" alt="Co-Work Lite Membership" loading="lazy">
+          <h3>Co-Work Lite</h3>
+          <p class="membership-price">R750</p>
+          <p class="membership-frequency">per month</p>
+          <ul>
+            <li>10 co-working hours per month</li>
+            <li>Child supervision while you work onsite</li>
+            <li>2 complimentary coffees per month</li>
+          </ul>
+          <a class="membership-button" href="mailto:cpt.readworkplay@gmail.com?subject=Co-Work%20Lite%20Enquiry">Enquire about this membership</a>
+        </article>
+
+        <article class="membership-card">
+          <img class="membership-image" src="co-work%20standard.png" alt="Co-Work Standard Membership" loading="lazy">
+          <h3>Co-Work Standard</h3>
+          <p class="membership-price">R1,450</p>
+          <p class="membership-frequency">per month</p>
+          <ul>
+            <li>25 co-working hours per month</li>
+            <li>A regular place to work with support nearby</li>
+          </ul>
+          <a class="membership-button" href="mailto:cpt.readworkplay@gmail.com?subject=Co-Work%20Standard%20Enquiry">Enquire about this membership</a>
+        </article>
+
+        <article class="membership-card">
+          <img class="membership-image" src="co-work%20premium.png" alt="Co-Work Premium Membership" loading="lazy">
+          <h3>Co-Work Premium</h3>
+          <p class="membership-price">R2,500</p>
+          <p class="membership-frequency">per month</p>
+          <ul>
+            <li>50 co-working hours per month</li>
+            <li>Priority booking</li>
+            <li>4 complimentary coffees per month</li>
+          </ul>
+          <a class="membership-button" href="mailto:cpt.readworkplay@gmail.com?subject=Co-Work%20Premium%20Enquiry">Enquire about this membership</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="membership-terms">
+      <h2>Before you join</h2>
+      <ul>
+        <li>Memberships are billed monthly and renew automatically until cancelled, subject to the membership terms.</li>
+        <li>Advance booking is required and all sessions are subject to availability.</li>
+        <li>Co-working memberships require the parent to remain onsite.</li>
+        <li>Unused hours and activity credits are subject to the membership rollover and expiry rules.</li>
+        <li>Memberships are for your family and cannot be transferred outside your family.</li>
+        <li>Membership hours do not cover Date Nights or Rent-a-Nanny services.</li>
+      </ul>
+      <p>Please contact us to confirm the full booking, cancellation, rollover and membership terms before subscribing.</p>
+    </section>
+
+    <footer class="membership-contact">
+      <p><strong>Not sure which membership is right for you?</strong></p>
+      <p>Let's find the best fit for your family.</p>
+      <p><a href="mailto:cpt.readworkplay@gmail.com">cpt.readworkplay@gmail.com</a></p>
+    </footer>
+
+  </main>
+</body>
+</html>
